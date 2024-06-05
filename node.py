@@ -139,9 +139,6 @@ def plot_boxes_to_image(image_pil, tgt):
 def OmDet_detect(image_pil, labels, conf_threshold=0.30, nms_threshold=0.5,device="cuda"):
     prompt = "Detect {}.".format(",".join(labels))
     engine = DetEngine(batch_size=1, device=device)
-
-
-    
     res = engine.inf_predict(
         "OmDet-Turbo_tiny_SWIN_T",
         task=prompt,
@@ -151,10 +148,6 @@ def OmDet_detect(image_pil, labels, conf_threshold=0.30, nms_threshold=0.5,devic
         conf_threshold=conf_threshold,
         nms_threshold=nms_threshold,
     )
-    
-    print("labels",labels)
-    print("prompt",prompt)
-    
     return res
 
 def get_labels(input_string):
@@ -209,7 +202,6 @@ class ApplyOmDet:
             image_pil = Image.fromarray(np.clip(255.0 * item.cpu().numpy(), 0, 255).astype(np.uint8)).convert("RGB")
             labels = get_labels(prompt)
             results = OmDet_detect(image_pil, labels, conf_threshold, nms_threshold, device)
-            print('results',results)
 
             size = image_pil.size
             pred_dict = {
