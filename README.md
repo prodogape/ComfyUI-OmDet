@@ -10,7 +10,7 @@ This node is mainly based on [OmDet](https://github.com/om-ai-lab/OmDet) for obj
 # NODES
 |name                          |description                                        |
 |------------------------------|---------------------------------------------------|
-|Apply Apply OmDet             |Apply OmDer model, supports automatic download     |
+|Apply OmDet                   |Apply OmDer model, supports automatic download     |
 
 # INSTALL
 you need to install the following dependencies:
