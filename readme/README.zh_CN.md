@@ -18,7 +18,8 @@ pip install -r requirements.txt
 ```
 
 # 模型
-本节点会自动根据你选择的语言下载对应模型
+本节点会自动下载对应模型
+
 ```
 ComfyUI
     models
