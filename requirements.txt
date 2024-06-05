@@ -1,0 +1,6 @@
+lmdb
+pytorch
+torchvision
+pytorch-cuda
+pytorch
+detectron2
