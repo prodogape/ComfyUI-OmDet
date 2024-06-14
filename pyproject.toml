@@ -1,0 +1,15 @@
+[project]
+name = "comfyui-omdet"
+description = "This node is mainly based on [a/OmDet](https://github.com/om-ai-lab/OmDet) for object detection, and it outputs related images, masks, and Labelme JSON information."
+version = "1.0.0"
+license = "LICENSE"
+dependencies = ["lmdb", "pytorch", "torchvision", "pytorch-cuda", "pytorch", "detectron2"]
+
+[project.urls]
+Repository = "https://github.com/prodogape/ComfyUI-OmDet"
+#  Used by Comfy Registry https://comfyregistry.org
+
+[tool.comfy]
+PublisherId = ""
+DisplayName = "ComfyUI-OmDet"
+Icon = ""
